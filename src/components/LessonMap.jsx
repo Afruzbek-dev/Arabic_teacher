@@ -132,7 +132,8 @@ export default function LessonMap() {
                 onClick={() => {
                   const id = selected.id
                   setSelected(null)
-                  navigate('lesson', { lessonId: id })
+                  // Small delay to let sheet close animation start
+                  setTimeout(() => navigate('lesson', { lessonId: id }), 50)
                 }}
               >
                 {completed.has(selected.id) ? 'Qayta ishlash' : 'Boshlash'}

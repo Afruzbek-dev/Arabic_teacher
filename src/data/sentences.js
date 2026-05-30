@@ -176,6 +176,117 @@ export const PASSAGES = {
       },
     ],
   },
+  // ═══════════ B2 PASSAGES ═══════════
+  'p-economy': {
+    id: 'p-economy',
+    level: 'B2',
+    title: 'Iqtisodiy tahlil',
+    tokens: [
+      { ar: 'يَعْتَمِدُ', uz: 'tayanaadi' },
+      { ar: 'الِاقْتِصَادُ', uz: 'iqtisodiyot' },
+      { ar: 'عَلَى', uz: '..ga' },
+      { ar: 'التِّجَارَةِ', uz: 'savdoga' },
+      { ar: 'وَالِاسْتِثْمَارِ', uz: 'va investitsiyaga' },
+    ],
+    text: 'يَعْتَمِدُ الِاقْتِصَادُ الْحَدِيثُ عَلَى التِّجَارَةِ الدَّوْلِيَّةِ وَالِاسْتِثْمَارِ الأَجْنَبِيِّ.',
+    uz: "Zamonaviy iqtisodiyot xalqaro savdo va xorijiy investitsiyaga tayanadi.",
+    questions: [
+      { q: 'Zamonaviy iqtisod nimaga tayanadi?', options: ['Savdo va investitsiya', 'Faqat qishloq xo\'jaligi', 'Sanoat'], answer: 'Savdo va investitsiya' },
+    ],
+  },
+
+  'p-science': {
+    id: 'p-science',
+    level: 'B2',
+    title: "Sun'iy intellekt",
+    tokens: [
+      { ar: 'يُغَيِّرُ', uz: 'o\'zgartirmoqda' },
+      { ar: 'الذَّكَاءُ الِاصْطِنَاعِيُّ', uz: 'sun\'iy intellekt' },
+      { ar: 'حَيَاتَنَا', uz: 'hayotimizni' },
+      { ar: 'بِسُرْعَةٍ', uz: 'tezlik bilan' },
+    ],
+    text: 'يُغَيِّرُ الذَّكَاءُ الِاصْطِنَاعِيُّ حَيَاتَنَا بِسُرْعَةٍ كَبِيرَةٍ فِي مَجَالَاتِ الطِّبِّ وَالتَّعْلِيمِ وَالصِّنَاعَةِ.',
+    uz: "Sun'iy intellekt tibbiyot, ta'lim va sanoat sohalarida hayotimizni katta tezlik bilan o'zgartirmoqda.",
+    questions: [
+      { q: 'SI qaysi sohalarda ta\'sir qilmoqda?', options: ['Tibbiyot, ta\'lim, sanoat', 'Faqat sanoat', 'Qishloq xo\'jaligi'], answer: 'Tibbiyot, ta\'lim, sanoat' },
+    ],
+  },
+
+  // ═══════════ C1 PASSAGES ═══════════
+  'p-academic': {
+    id: 'p-academic',
+    level: 'C1',
+    title: 'Ilmiy tadqiqot',
+    tokens: [
+      { ar: 'تَهْدِفُ', uz: 'maqsad qiladi' },
+      { ar: 'هَذِهِ الدِّرَاسَةُ', uz: 'bu tadqiqot' },
+      { ar: 'إِلَى تَحْلِيلِ', uz: 'tahlil qilishni' },
+      { ar: 'أَثَرِ', uz: 'ta\'sirini' },
+      { ar: 'التَّعْلِيمِ الإِلِكْتِرُونِيِّ', uz: 'elektron ta\'limning' },
+    ],
+    text: 'تَهْدِفُ هَذِهِ الدِّرَاسَةُ إِلَى تَحْلِيلِ أَثَرِ التَّعْلِيمِ الإِلِكْتِرُونِيِّ عَلَى تَحْصِيلِ الطُّلَّابِ فِي الْمَرْحَلَةِ الْجَامِعِيَّةِ.',
+    uz: "Bu tadqiqot elektron ta'limning universitet bosqichidagi talabalar yutuqlariga ta'sirini tahlil qilishni maqsad qiladi.",
+    questions: [
+      { q: 'Tadqiqot nimani tahlil qiladi?', options: ['Elektron ta\'lim ta\'sirini', 'Iqtisodiy o\'sishni', 'Sog\'liq muammolarini'], answer: 'Elektron ta\'lim ta\'sirini' },
+    ],
+  },
+
+  'p-politics': {
+    id: 'p-politics',
+    level: 'C1',
+    title: 'Demokratiya va inson huquqlari',
+    tokens: [
+      { ar: 'تَقُومُ', uz: 'asoslanadi' },
+      { ar: 'الدِّيمُقْرَاطِيَّةُ', uz: 'demokratiya' },
+      { ar: 'عَلَى', uz: '..ga' },
+      { ar: 'مَبْدَأِ', uz: 'tamoyiliga' },
+      { ar: 'حُقُوقِ الإِنْسَانِ', uz: 'inson huquqlari' },
+      { ar: 'وَالْمُسَاوَاةِ', uz: 'va tenglik' },
+    ],
+    text: 'تَقُومُ الدِّيمُقْرَاطِيَّةُ عَلَى مَبْدَأِ حُقُوقِ الإِنْسَانِ وَالْمُسَاوَاةِ أَمَامَ الْقَانُونِ وَحُرِّيَّةِ التَّعْبِيرِ.',
+    uz: "Demokratiya inson huquqlari, qonun oldida tenglik va so'z erkinligi tamoyiliga asoslanadi.",
+    questions: [
+      { q: 'Demokratiya nimaga asoslanadi?', options: ['Inson huquqlari va tenglik', 'Faqat saylovlarga', 'Harbiy kuchga'], answer: 'Inson huquqlari va tenglik' },
+    ],
+  },
+
+  // ═══════════ C2 PASSAGES ═══════════
+  'p-classical': {
+    id: 'p-classical',
+    level: 'C2',
+    title: "Imru'ul-Qays she'ridan",
+    tokens: [
+      { ar: 'قِفَا', uz: 'to\'xtanglar' },
+      { ar: 'نَبْكِ', uz: 'yig\'laylik' },
+      { ar: 'مِنْ ذِكْرَى', uz: 'xotirasidan' },
+      { ar: 'حَبِيبٍ', uz: 'sevgilining' },
+      { ar: 'وَمَنْزِلِ', uz: 'va manzilning' },
+    ],
+    text: 'قِفَا نَبْكِ مِنْ ذِكْرَى حَبِيبٍ وَمَنْزِلِ بِسِقْطِ اللِّوَى بَيْنَ الدَّخُولِ فَحَوْمَلِ',
+    uz: "To'xtanglar! Sevgilining va manzilning xotirasidan yig'laylik — qumtepa etagida, Daxul va Hawmal o'rtasida.",
+    questions: [
+      { q: 'Bu she\'r kim tomonidan yozilgan?', options: ['Imru\'ul-Qays', 'Al-Mutanabbi', 'Abu Nuwas'], answer: 'Imru\'ul-Qays' },
+      { q: 'She\'r qanday ohang bilan boshlanadi?', options: ['Quvnoq', 'Hasratli', 'G\'azabli'], answer: 'Hasratli' },
+    ],
+  },
+
+  'p-translation': {
+    id: 'p-translation',
+    level: 'C2',
+    title: 'Tarjima nazariyasi',
+    tokens: [
+      { ar: 'تَتَطَلَّبُ', uz: 'talab qiladi' },
+      { ar: 'التَّرْجَمَةُ', uz: 'tarjima' },
+      { ar: 'الأَدَبِيَّةُ', uz: 'badiiy' },
+      { ar: 'إِتْقَانَ', uz: 'mukammal bilishni' },
+      { ar: 'اللُّغَتَيْنِ', uz: 'ikki tilni' },
+    ],
+    text: 'تَتَطَلَّبُ التَّرْجَمَةُ الأَدَبِيَّةُ إِتْقَانَ اللُّغَتَيْنِ وَفَهْمَ السِّيَاقِ الثَّقَافِيِّ وَالقُدْرَةَ عَلَى نَقْلِ الأُسْلُوبِ وَلَيْسَ الْمَعْنَى فَحَسْبُ.',
+    uz: "Badiiy tarjima ikki tilni mukammal bilishni, madaniy kontekstni tushunishni va faqat ma'noni emas, balki uslubni ham ko'chirishni talab qiladi.",
+    questions: [
+      { q: 'Badiiy tarjima nima talab qiladi?', options: ['Ikki tilni bilish va uslubni ko\'chirish', 'Faqat lug\'at bilish', 'Grammatikani bilish'], answer: 'Ikki tilni bilish va uslubni ko\'chirish' },
+    ],
+  },
 }
 
 export function getPassage(id) {

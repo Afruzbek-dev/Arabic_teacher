@@ -127,6 +127,87 @@ export const VOCAB = [
   { id: 'v303', ar: 'أَكَلَ', uz: 'yedi', translit: 'akala', emoji: '🍽️', level: 'A2', tags: ['verbs'] },
   { id: 'v304', ar: 'شَرِبَ', uz: 'ichdi', translit: 'shariba', emoji: '🥤', level: 'A2', tags: ['verbs'] },
   { id: 'v305', ar: 'دَرَسَ', uz: "o'rgandi", translit: 'darasa', emoji: '📚', level: 'A2', tags: ['verbs'] },
+
+  // ═══════════ B2 · Iqtisodiyot, ilm-fan, adabiyot, rasmiy muloqot ═══════════
+  { id: 'v400', ar: 'اِقْتِصَاد', uz: 'Iqtisodiyot', translit: 'iqtisad', emoji: '📊', level: 'B2', tags: ['economics'] },
+  { id: 'v401', ar: 'تِجَارَة', uz: 'Savdo', translit: 'tijara', emoji: '🏪', level: 'B2', tags: ['economics'] },
+  { id: 'v402', ar: 'اِسْتِثْمَار', uz: 'Investitsiya', translit: 'istithmar', emoji: '💹', level: 'B2', tags: ['economics'] },
+  { id: 'v403', ar: 'مَشْرُوع', uz: 'Loyiha', translit: "mashru'", emoji: '📋', level: 'B2', tags: ['economics'] },
+  { id: 'v404', ar: 'مِيزَانِيَّة', uz: 'Byudjet', translit: 'mizaniyya', emoji: '💰', level: 'B2', tags: ['economics'] },
+  { id: 'v405', ar: 'صَادِرَات', uz: 'Eksport', translit: 'sadirat', emoji: '📦', level: 'B2', tags: ['economics'] },
+  { id: 'v406', ar: 'وَارِدَات', uz: 'Import', translit: 'waridat', emoji: '🚢', level: 'B2', tags: ['economics'] },
+
+  { id: 'v410', ar: 'تَقْنِيَّة', uz: 'Texnologiya', translit: 'taqniyya', emoji: '💻', level: 'B2', tags: ['science'] },
+  { id: 'v411', ar: 'اِخْتِرَاع', uz: "Ixtiro", translit: "ikhtira'", emoji: '🔬', level: 'B2', tags: ['science'] },
+  { id: 'v412', ar: 'ذَكَاء اِصْطِنَاعِيّ', uz: "Sun'iy intellekt", translit: "dhaka' istina'i", emoji: '🤖', level: 'B2', tags: ['science'] },
+  { id: 'v413', ar: 'بَحْث', uz: 'Tadqiqot', translit: 'bahth', emoji: '🔍', level: 'B2', tags: ['science'] },
+  { id: 'v414', ar: 'تَجْرِبَة', uz: 'Tajriba', translit: 'tajriba', emoji: '🧪', level: 'B2', tags: ['science'] },
+  { id: 'v415', ar: 'نَتِيجَة', uz: 'Natija', translit: 'natija', emoji: '📈', level: 'B2', tags: ['science'] },
+
+  { id: 'v420', ar: 'أَدَب', uz: 'Adabiyot', translit: 'adab', emoji: '📜', level: 'B2', tags: ['literature'] },
+  { id: 'v421', ar: 'شِعْر', uz: "She'riyat", translit: "shi'r", emoji: '✒️', level: 'B2', tags: ['literature'] },
+  { id: 'v422', ar: 'رِوَايَة', uz: 'Roman', translit: 'riwaya', emoji: '📖', level: 'B2', tags: ['literature'] },
+  { id: 'v423', ar: 'قِصَّة', uz: 'Hikoya', translit: 'qissa', emoji: '📕', level: 'B2', tags: ['literature'] },
+  { id: 'v424', ar: 'مُؤَلِّف', uz: 'Muallif', translit: "mu'allif", emoji: '🖊️', level: 'B2', tags: ['literature'] },
+  { id: 'v425', ar: 'نَقْد', uz: 'Tanqid', translit: 'naqd', emoji: '📝', level: 'B2', tags: ['literature'] },
+
+  { id: 'v430', ar: 'خِطَاب', uz: 'Nutq / xitob', translit: 'khitab', emoji: '🎤', level: 'B2', tags: ['formal'] },
+  { id: 'v431', ar: 'مُؤْتَمَر', uz: 'Konferensiya', translit: "mu'tamar", emoji: '🏛️', level: 'B2', tags: ['formal'] },
+  { id: 'v432', ar: 'اِتِّفَاقِيَّة', uz: 'Shartnoma', translit: 'ittifaqiyya', emoji: '📄', level: 'B2', tags: ['formal'] },
+  { id: 'v433', ar: 'دِبْلُومَاسِيَّة', uz: 'Diplomatiya', translit: 'diblumasiyya', emoji: '🤝', level: 'B2', tags: ['formal'] },
+  { id: 'v434', ar: 'تَفَاوُض', uz: 'Muzokaralar', translit: 'tafawud', emoji: '⚖️', level: 'B2', tags: ['formal'] },
+
+  // ═══════════ C1 · Akademik yozish, siyosat, media, islom ═══════════
+  { id: 'v500', ar: 'أُطْرُوحَة', uz: 'Dissertatsiya', translit: 'utruha', emoji: '🎓', level: 'C1', tags: ['academic'] },
+  { id: 'v501', ar: 'مَنْهَجِيَّة', uz: 'Metodologiya', translit: 'manhajiyya', emoji: '📐', level: 'C1', tags: ['academic'] },
+  { id: 'v502', ar: 'اِسْتِنْتَاج', uz: 'Xulosa', translit: 'istintaj', emoji: '🎯', level: 'C1', tags: ['academic'] },
+  { id: 'v503', ar: 'مَرْجِع', uz: 'Manba', translit: "marji'", emoji: '📚', level: 'C1', tags: ['academic'] },
+  { id: 'v504', ar: 'تَحْلِيل', uz: 'Tahlil', translit: 'tahlil', emoji: '🔎', level: 'C1', tags: ['academic'] },
+  { id: 'v505', ar: 'فَرَضِيَّة', uz: 'Gipoteza', translit: 'faradiyya', emoji: '💡', level: 'C1', tags: ['academic'] },
+
+  { id: 'v510', ar: 'سِيَاسَة', uz: 'Siyosat', translit: 'siyasa', emoji: '🏛️', level: 'C1', tags: ['politics'] },
+  { id: 'v511', ar: 'دِيمُقْرَاطِيَّة', uz: 'Demokratiya', translit: 'dimuqratiyya', emoji: '🗳️', level: 'C1', tags: ['politics'] },
+  { id: 'v512', ar: 'اِنْتِخَابَات', uz: 'Saylovlar', translit: 'intikhabat', emoji: '🗳️', level: 'C1', tags: ['politics'] },
+  { id: 'v513', ar: 'بَرْلَمَان', uz: 'Parlament', translit: 'barlaman', emoji: '🏛️', level: 'C1', tags: ['politics'] },
+  { id: 'v514', ar: 'دُسْتُور', uz: 'Konstitutsiya', translit: 'dustur', emoji: '📜', level: 'C1', tags: ['politics'] },
+  { id: 'v515', ar: 'حُقُوق الإِنْسَان', uz: 'Inson huquqlari', translit: 'huquq al-insan', emoji: '⚖️', level: 'C1', tags: ['politics'] },
+
+  { id: 'v520', ar: 'صَحَافَة', uz: 'Jurnalistika', translit: 'sahafa', emoji: '📰', level: 'C1', tags: ['media'] },
+  { id: 'v521', ar: 'بَثّ مُبَاشِر', uz: 'Jonli efir', translit: 'bathth mubashir', emoji: '📡', level: 'C1', tags: ['media'] },
+  { id: 'v522', ar: 'تَحْقِيق', uz: 'Jurnalistik tekshiruv', translit: 'tahqiq', emoji: '🕵️', level: 'C1', tags: ['media'] },
+  { id: 'v523', ar: 'مَصَادِر مَوْثُوقَة', uz: 'Ishonchli manbalar', translit: 'masadir mawthuqa', emoji: '✅', level: 'C1', tags: ['media'] },
+
+  { id: 'v530', ar: 'تَفْسِير', uz: 'Tafsir', translit: 'tafsir', emoji: '📖', level: 'C1', tags: ['islamic'] },
+  { id: 'v531', ar: 'حَدِيث', uz: 'Hadis', translit: 'hadith', emoji: '📿', level: 'C1', tags: ['islamic'] },
+  { id: 'v532', ar: 'فِقْه', uz: 'Fiqh (islom huquqi)', translit: 'fiqh', emoji: '⚖️', level: 'C1', tags: ['islamic'] },
+  { id: 'v533', ar: 'عَقِيدَة', uz: 'Aqida', translit: "'aqida", emoji: '🕌', level: 'C1', tags: ['islamic'] },
+  { id: 'v534', ar: 'إِجْمَاع', uz: 'Ijmo (konsensus)', translit: "ijma'", emoji: '🤝', level: 'C1', tags: ['islamic'] },
+
+  // ═══════════ C2 · Klassik adabiyot, ilmiy tadqiqot, dialektlar, tarjima ═══════════
+  { id: 'v600', ar: 'بَلَاغَة', uz: 'Balog\'a (ritorika)', translit: 'balagha', emoji: '🏆', level: 'C2', tags: ['classical'] },
+  { id: 'v601', ar: 'نَحْو', uz: 'Nahv (sintaksis)', translit: 'nahw', emoji: '📐', level: 'C2', tags: ['classical'] },
+  { id: 'v602', ar: 'صَرْف', uz: 'Sarf (morfologiya)', translit: 'sarf', emoji: '🔬', level: 'C2', tags: ['classical'] },
+  { id: 'v603', ar: 'إِعْرَاب', uz: "I'rob (gap bo'laklash)", translit: "i'rab", emoji: '📝', level: 'C2', tags: ['classical'] },
+  { id: 'v604', ar: 'مَجَاز', uz: 'Majoz (metafora)', translit: 'majaz', emoji: '🎭', level: 'C2', tags: ['classical'] },
+  { id: 'v605', ar: 'اِسْتِعَارَة', uz: "Isti'ora (ko'chma)", translit: "isti'ara", emoji: '🌊', level: 'C2', tags: ['classical'] },
+  { id: 'v606', ar: 'قَصِيدَة', uz: 'Qasida (she\'r turi)', translit: 'qasida', emoji: '📜', level: 'C2', tags: ['classical'] },
+
+  { id: 'v610', ar: 'مَقَال عِلْمِيّ', uz: 'Ilmiy maqola', translit: "maqal 'ilmi", emoji: '📄', level: 'C2', tags: ['research'] },
+  { id: 'v611', ar: 'مُلَخَّص', uz: 'Annotatsiya', translit: 'mulakhkhas', emoji: '📋', level: 'C2', tags: ['research'] },
+  { id: 'v612', ar: 'اِقْتِبَاس', uz: 'Sitata (iqtibos)', translit: 'iqtibas', emoji: '💬', level: 'C2', tags: ['research'] },
+  { id: 'v613', ar: 'حَاشِيَة', uz: 'Izoh (footnote)', translit: 'hashiya', emoji: '🔖', level: 'C2', tags: ['research'] },
+  { id: 'v614', ar: 'مُرَاجَعَة', uz: "Ekspert tekshiruvi", translit: "muraja'a", emoji: '🔍', level: 'C2', tags: ['research'] },
+
+  { id: 'v620', ar: 'لَهْجَة', uz: 'Lahja (dialekt)', translit: 'lahja', emoji: '🗣️', level: 'C2', tags: ['dialects'] },
+  { id: 'v621', ar: 'فُصْحَى', uz: 'Fusha (adabiy til)', translit: 'fusha', emoji: '📖', level: 'C2', tags: ['dialects'] },
+  { id: 'v622', ar: 'عَامِّيَّة', uz: 'Ammiya (so\'zlashuv tili)', translit: "'ammiyya", emoji: '💬', level: 'C2', tags: ['dialects'] },
+  { id: 'v623', ar: 'مَصْرِيَّة', uz: 'Misr dialekti', translit: 'masriyya', emoji: '🇪🇬', level: 'C2', tags: ['dialects'] },
+  { id: 'v624', ar: 'شَامِيَّة', uz: 'Shom dialekti', translit: 'shamiyya', emoji: '🇸🇾', level: 'C2', tags: ['dialects'] },
+
+  { id: 'v630', ar: 'تَرْجَمَة', uz: 'Tarjima', translit: 'tarjama', emoji: '🌐', level: 'C2', tags: ['translation'] },
+  { id: 'v631', ar: 'تَرْجَمَة فَوْرِيَّة', uz: "Sinxron tarjima", translit: 'tarjama fawriyya', emoji: '🎧', level: 'C2', tags: ['translation'] },
+  { id: 'v632', ar: 'سِيَاق', uz: 'Kontekst', translit: 'siyaq', emoji: '🔗', level: 'C2', tags: ['translation'] },
+  { id: 'v633', ar: 'مُصْطَلَح', uz: 'Termin', translit: 'mustalah', emoji: '📘', level: 'C2', tags: ['translation'] },
 ]
 
 // ── Helpers ──────────────────────────────────────────────

@@ -63,10 +63,10 @@ export default function LessonPlayer({ lessonId }) {
     setCorrect(false)
   }, [idx])
 
-  if (!lesson || !step) {
+  if (!lesson || steps.length === 0 || !step) {
     return (
       <div className="flex min-h-screen flex-col items-center justify-center gap-4 p-6">
-        <p className="text-muted">Dars topilmadi.</p>
+        <p className="text-muted">{!lesson ? 'Dars topilmadi.' : 'Bu darsda mashqlar hali qo\'shilmagan.'}</p>
         <Button onClick={() => navigate('map')}>Yo'lga qaytish</Button>
       </div>
     )

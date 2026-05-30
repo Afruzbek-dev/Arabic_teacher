@@ -1,0 +1,20 @@
+# Cloudflare Workers configuration
+# Deploy: npx wrangler deploy
+# Dev:    npx wrangler dev
+
+name = "arabic-academy-api"
+main = "src/index.js"
+compatibility_date = "2024-12-01"
+
+[vars]
+ENVIRONMENT = "production"
+
+# KV Namespace for user progress storage
+[[kv_namespaces]]
+binding = "USERS_KV"
+id = "YOUR_KV_NAMESPACE_ID"
+preview_id = "YOUR_PREVIEW_KV_ID"
+
+# Secrets (set via `wrangler secret put`):
+#   FIREBASE_PROJECT_ID
+#   TELEGRAM_BOT_TOKEN

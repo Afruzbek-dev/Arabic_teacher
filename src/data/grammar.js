@@ -178,6 +178,217 @@ export const GRAMMAR = {
       },
     ],
   },
+
+  // ═══════════ B2 GRAMMAR ═══════════
+  'g-inna': {
+    id: 'g-inna',
+    level: 'B2',
+    title: "إِنَّ va uning singillari",
+    summary:
+      "إِنَّ gapga kirib, egani nasb (ـَ) holatiga, xabarni raf' holatida qoldiradi. إِنَّ الْعِلْمَ نُورٌ — albatta ilm nurdir.",
+    points: [
+      { ar: 'إِنَّ', uz: 'albatta / haqiqatdan' },
+      { ar: 'أَنَّ', uz: "...ligini (to'ldiruvchi gapda)" },
+      { ar: 'لَكِنَّ', uz: 'lekin' },
+      { ar: 'لَعَلَّ', uz: 'balki / ehtimol' },
+    ],
+    examples: [
+      { ar: 'إِنَّ الْعِلْمَ مُفِيدٌ', uz: 'Albatta ilm foydali' },
+      { ar: 'أَعْلَمُ أَنَّ الِاقْتِصَادَ مُهِمٌّ', uz: 'Bilaman, iqtisod muhim' },
+    ],
+    blanks: [
+      {
+        prompt: "To'ldiring: إِنَّ ning egasi nasb (ـَ) holatida",
+        sentence: 'إِنَّ ___ جَمِيلٌ',
+        options: ['الطَّقْسَ', 'الطَّقْسُ', 'الطَّقْسِ'],
+        answer: 'الطَّقْسَ',
+        uz: "إِنَّ ism nasb qiladi (ـَ).",
+      },
+    ],
+  },
+
+  'g-passive': {
+    id: 'g-passive',
+    level: 'B2',
+    title: "Majhul (المَبْنِيّ لِلْمَجْهُول)",
+    summary:
+      "Noma'lum nisbat: fe'l egasi ko'rsatilmaydi. كُتِبَ (yozildi), يُكْتَبُ (yoziladi). Harakat o'zgaradi: فُعِلَ / يُفْعَلُ.",
+    points: [
+      { ar: 'كَتَبَ ← كُتِبَ', uz: 'yozdi ← yozildi' },
+      { ar: 'يَكْتُبُ ← يُكْتَبُ', uz: 'yozadi ← yoziladi' },
+    ],
+    examples: [
+      { ar: 'كُتِبَ الْمَقَالُ أَمْسِ', uz: 'Maqola kecha yozildi' },
+      { ar: 'يُدَرَّسُ هَذَا الْكِتَابُ فِي الْجَامِعَةِ', uz: 'Bu kitob universitetda o\'qitiladi' },
+    ],
+    blanks: [
+      {
+        prompt: "Majhul shaklini tanlang: 'kitob yozildi'",
+        sentence: '___ الْكِتَابُ',
+        options: ['كَتَبَ', 'كُتِبَ', 'يَكْتُبُ'],
+        answer: 'كُتِبَ',
+        uz: "Madi majhul: فُعِلَ vazni.",
+      },
+    ],
+  },
+
+  'g-relative': {
+    id: 'g-relative',
+    level: 'B2',
+    title: "Sifatdosh gap (الجُمْلَة الْمَوْصُولَة)",
+    summary:
+      "الَّذِي (muzakkar) / الَّتِي (muannas) bilan bog'lanuvchi gap: الطَّالِبُ الَّذِي دَرَسَ نَجَحَ — o'qigan talaba muvaffaq bo'ldi.",
+    points: [
+      { ar: 'الَّذِي', uz: 'qaysi/..gan (muzakkar)' },
+      { ar: 'الَّتِي', uz: 'qaysi/..gan (muannas)' },
+      { ar: 'الَّذِينَ', uz: "qaysi/..ganlar (ko'plik)" },
+    ],
+    examples: [
+      { ar: 'الرَّجُلُ الَّذِي سَافَرَ عَادَ', uz: 'Sayohat qilgan odam qaytdi' },
+      { ar: 'الْمَدِينَةُ الَّتِي زُرْتُهَا جَمِيلَةٌ', uz: 'Borgan shahrim chiroyli' },
+    ],
+    blanks: [
+      {
+        prompt: "To'ldiring: 'kitob o'qigan talaba'",
+        sentence: 'الطَّالِبُ ___ قَرَأَ الْكِتَابَ',
+        options: ['الَّذِي', 'الَّتِي', 'الَّذِينَ'],
+        answer: 'الَّذِي',
+        uz: "Muzakkar birlik: الَّذِي.",
+      },
+    ],
+  },
+
+  // ═══════════ C1 GRAMMAR ═══════════
+  'g-subjunctive': {
+    id: 'g-subjunctive',
+    level: 'C1',
+    title: "Nasb holat (المُضَارِع المَنْصُوب)",
+    summary:
+      "أَنْ / لَنْ / كَيْ / حَتَّى kabi harflardan keyin mudori' nasb holatida: أُرِيدُ أَنْ أَدْرُسَ — o'qishni xohlayman.",
+    points: [
+      { ar: 'أَنْ + فِعْل', uz: "...moqchi (maqsad)" },
+      { ar: 'لَنْ + فِعْل', uz: "hech...maydi (kelajakda inkor)" },
+      { ar: 'كَيْ / لِكَيْ', uz: "...ish uchun" },
+    ],
+    examples: [
+      { ar: 'أُرِيدُ أَنْ أَتَعَلَّمَ', uz: "O'rganmoqchiman" },
+      { ar: 'لَنْ أُسَافِرَ غَدًا', uz: 'Ertaga sayohat qilmayman' },
+    ],
+    blanks: [
+      {
+        prompt: "أَنْ dan keyin mudori' nasb (ـَ) bo'ladi:",
+        sentence: 'أُرِيدُ أَنْ ___',
+        options: ['أَدْرُسَ', 'أَدْرُسُ', 'دَرَسَ'],
+        answer: 'أَدْرُسَ',
+        uz: "أَنْ dan keyin fe'l nasb: ـَ.",
+      },
+    ],
+  },
+
+  'g-conditionals': {
+    id: 'g-conditionals',
+    level: 'C1',
+    title: "Shart gaplar (الجُمْلَة الشَّرْطِيَّة)",
+    summary:
+      "إِنْ (real shart) / لَوْ (noreal shart) + jazm: إِنْ تَدْرُسْ تَنْجَحْ — agar o'qisang, muvaffaq bo'lasan.",
+    points: [
+      { ar: 'إِنْ + مُضَارِع مَجْزُوم', uz: 'agar... (real shart)' },
+      { ar: 'لَوْ + مَاضٍ', uz: 'agar...ganda edi (noreal)' },
+    ],
+    examples: [
+      { ar: 'إِنْ تَجْتَهِدْ تَنْجَحْ', uz: 'Agar tirishsang, muvaffaq bo\'lasan' },
+      { ar: 'لَوْ دَرَسْتَ لَنَجَحْتَ', uz: 'Agar o\'qiganing uchun muvaffaq bo\'larding' },
+    ],
+    blanks: [
+      {
+        prompt: "إِنْ dan keyin fe'l jazm (ـْ) holatida:",
+        sentence: 'إِنْ ___ تَنْجَحْ',
+        options: ['تَدْرُسْ', 'تَدْرُسُ', 'دَرَسْتَ'],
+        answer: 'تَدْرُسْ',
+        uz: "إِنْ dan keyin mudori' majzum (ـْ).",
+      },
+    ],
+  },
+
+  'g-advanced-verb': {
+    id: 'g-advanced-verb',
+    level: 'C1',
+    title: "Ilg'or fe'l vaznlari (أَفْعَلَ، تَفَاعَلَ، اِسْتَفْعَلَ)",
+    summary:
+      "Arab tilida fe'l vaznlari ma'noni o'zgartiradi: عَلِمَ (bildi) → أَعْلَمَ (xabar berdi) → تَعَلَّمَ (o'rgandi) → اِسْتَعْلَمَ (so'radi).",
+    points: [
+      { ar: 'أَفْعَلَ (IV)', uz: "O'timli / ta'sir qiluvchi" },
+      { ar: 'تَفَاعَلَ (VI)', uz: "O'zaro harakat" },
+      { ar: 'اِسْتَفْعَلَ (X)', uz: "So'rash / talab qilish" },
+    ],
+    examples: [
+      { ar: 'أَعْلَنَ الْخَبَرَ', uz: 'Yangilikni e\'lon qildi' },
+      { ar: 'تَبَادَلُوا الْآرَاءَ', uz: 'Fikr almashdilar' },
+      { ar: 'اِسْتَخْدَمَ الْحَاسُوبَ', uz: 'Kompyuterni ishlatdi' },
+    ],
+    blanks: [
+      {
+        prompt: "اِسْتَفْعَلَ vazni — 'ishlatdi':",
+        sentence: '___ الْبَرْنَامَجَ',
+        options: ['خَدَمَ', 'أَخْدَمَ', 'اِسْتَخْدَمَ'],
+        answer: 'اِسْتَخْدَمَ',
+        uz: "X vazn (اِسْتَفْعَلَ): so'rash/ishlatish ma'nosi.",
+      },
+    ],
+  },
+
+  // ═══════════ C2 GRAMMAR ═══════════
+  'g-rhetoric': {
+    id: 'g-rhetoric',
+    level: 'C2',
+    title: "Balog'a: bayoniy san'atlar",
+    summary:
+      "Tashbih (o'xshatish), isti'ora (metafora), kinoya (metonimiya) — arab ritorikasining asosiy san'atlari.",
+    points: [
+      { ar: 'التَّشْبِيه', uz: 'Tashbih — A kabi B (o\'xshatish)' },
+      { ar: 'الِاسْتِعَارَة', uz: 'Isti\'ora — metafora' },
+      { ar: 'الكِنَايَة', uz: 'Kinoya — anglatish' },
+    ],
+    examples: [
+      { ar: 'الْعِلْمُ نُورٌ', uz: 'Ilm nurdir (isti\'ora)' },
+      { ar: 'هُوَ أَسَدٌ فِي الْمَعْرَكَةِ', uz: 'U jangda sherdir (tashbih)' },
+    ],
+    blanks: [
+      {
+        prompt: "'Ilm nurdir' qanday san'at?",
+        sentence: 'الْعِلْمُ نُورٌ — bu ___',
+        options: ['تَشْبِيه', 'اِسْتِعَارَة', 'كِنَايَة'],
+        answer: 'اِسْتِعَارَة',
+        uz: "Bevosita o'xshatilganda, ya'ni 'kabi' so'zi yo'q — isti'ora.",
+      },
+    ],
+  },
+
+  'g-irab': {
+    id: 'g-irab',
+    level: 'C2',
+    title: "Murakkab i'rob tahlili",
+    summary:
+      "Gapni to'liq i'rob qilish: har bir so'zning grammatik rolini (mubtado, xabar, maf'ul, hal, tamyiz...) aniqlash.",
+    points: [
+      { ar: 'المَفْعُول بِهِ', uz: "Maf'ul bihi — to'g'ri to'ldiruvchi (nasb)" },
+      { ar: 'الحَال', uz: "Hol — holat bildiruvchi (nasb)" },
+      { ar: 'التَّمْيِيز', uz: "Tamyiz — farqlovchi (nasb)" },
+    ],
+    examples: [
+      { ar: 'شَرِبْتُ الْمَاءَ بَارِدًا', uz: "Suv ichdim sovuq holda (بَارِدًا — hol)" },
+      { ar: 'عِنْدِي عِشْرُونَ كِتَابًا', uz: "Menda yigirmata kitob bor (كِتَابًا — tamyiz)" },
+    ],
+    blanks: [
+      {
+        prompt: "بَارِدًا gap ichida qanday vazifada?",
+        sentence: 'شَرِبْتُ الْمَاءَ بَارِدًا',
+        options: ['مَفْعُول بِهِ', 'حَال', 'تَمْيِيز'],
+        answer: 'حَال',
+        uz: "Holat bildiradi: suv qanday holda ichildi — sovuq.",
+      },
+    ],
+  },
 }
 
 export function getGrammar(id) {
