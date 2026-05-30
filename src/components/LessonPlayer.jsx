@@ -7,6 +7,7 @@ import ExerciseEngine, { isStepCorrect, canCheck } from './ExerciseEngine'
 import Hearts from './Hearts'
 import { Button, ProgressBar, Sheet } from './ui'
 import { accuracyPct, starsFromAccuracy, computeLessonXP } from '../utils/scoring'
+import { preloadAudio } from '../utils/speechUtils'
 
 // Tiny sound effect using Web Audio API.
 function playTone(ok) {
@@ -55,6 +56,21 @@ export default function LessonPlayer({ lessonId }) {
 
   const step = steps[idx]
   const progress = steps.length ? (idx / steps.length) * 100 : 0
+
+  // Preload all audio for this lesson on mount
+  useEffect(() => {
+    if (!steps.length) return
+    const texts = new Set()
+    for (const s of steps) {
+      if (s.data?.audio) texts.add(s.data.audio)
+      if (s.data?.word?.ar) texts.add(s.data.word.ar)
+      if (s.data?.letter?.ar) texts.add(s.data.letter.ar)
+      if (s.data?.passage?.text) texts.add(s.data.passage.text)
+      if (s.data?.passage?.tokens) s.data.passage.tokens.forEach((t) => texts.add(t.ar))
+      if (s.data?.grammar?.examples) s.data.grammar.examples.forEach((e) => texts.add(e.ar))
+    }
+    preloadAudio([...texts])
+  }, [lessonId])
 
   useEffect(() => {
     // reset per-step state

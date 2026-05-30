@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Ar } from '../ui'
-import { speakArabic } from '../../utils/speechUtils'
+import { speakArabic, isAudioCached } from '../../utils/speechUtils'
 import { useStore } from '../../store/AppStore'
 
 // Generic multiple-choice exercise (controlled).
@@ -10,10 +10,17 @@ export default function QuizEngine({ step, selected, setSelected, checked, corre
   const { data } = step
   const isListening = !!data.audio
   const [rate, setRate] = useState(0.8)
+  const [playing, setPlaying] = useState(false)
+
+  const playAudio = async (r) => {
+    setPlaying(true)
+    await speakArabic(data.audio, { rate: r })
+    setPlaying(false)
+  }
 
   useEffect(() => {
     if (isListening && state.settings.autoPlayAudio) {
-      const t = setTimeout(() => speakArabic(data.audio, { rate }), 300)
+      const t = setTimeout(() => playAudio(rate), 300)
       return () => clearTimeout(t)
     }
   }, [step])
@@ -24,18 +31,24 @@ export default function QuizEngine({ step, selected, setSelected, checked, corre
       {isListening && (
         <div className="flex flex-col items-center gap-3">
           <button
-            onClick={() => speakArabic(data.audio, { rate })}
-            className="flex h-24 w-24 items-center justify-center rounded-3xl bg-info text-5xl text-white shadow-card active:scale-95"
+            onClick={() => playAudio(rate)}
+            disabled={playing}
+            className={`flex h-24 w-24 items-center justify-center rounded-3xl bg-info text-5xl text-white shadow-card transition active:scale-95 ${
+              playing ? 'animate-pulse' : ''
+            }`}
           >
-            🔊
+            {playing ? '🎵' : '🔊'}
           </button>
+          <p className="text-xs font-bold text-muted">
+            {playing ? 'Tinglayapsiz...' : 'Tinglash uchun bosing'}
+          </p>
           <div className="flex gap-2">
             {[0.5, 0.8, 1].map((r) => (
               <button
                 key={r}
                 onClick={() => {
                   setRate(r)
-                  speakArabic(data.audio, { rate: r })
+                  playAudio(r)
                 }}
                 className={`rounded-full px-3 py-1 text-xs font-bold ${
                   rate === r ? 'bg-info text-white' : 'bg-line text-muted'

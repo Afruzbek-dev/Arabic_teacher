@@ -4,7 +4,7 @@ import { useNav } from '../store/nav'
 import { Ar, Button, Confetti, ProgressBar } from './ui'
 import { dueCards, newCard, nextReviewLabel } from '../utils/srs'
 import { getWord, VOCAB } from '../data/vocabulary'
-import { speakArabic } from '../utils/speechUtils'
+import { speakArabic, preloadAudio } from '../utils/speechUtils'
 import { LEVEL_ORDER } from '../data/curriculum'
 
 // Spaced-repetition flashcard review.
@@ -38,6 +38,12 @@ export default function VocabReview() {
   const [results, setResults] = useState([])
   const [done, setDone] = useState(session.length === 0)
   const total = session.length
+
+  // Preload audio for all cards in the review session
+  useEffect(() => {
+    const texts = session.map((id) => getWord(id)?.ar).filter(Boolean)
+    if (texts.length) preloadAudio(texts)
+  }, [])
 
   const wordId = queue[pos]
   const word = wordId ? getWord(wordId) : null
