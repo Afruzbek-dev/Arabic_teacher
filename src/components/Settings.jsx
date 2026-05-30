@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useStore } from '../store/AppStore'
 import { useNav } from '../store/nav'
 import { Button, Sheet } from './ui'
-import { ttsSupported, recognitionSupported, hasArabicVoice } from '../utils/speechUtils'
+import { ttsSupported, recognitionSupported, hasArabicVoice, getAudioStatus } from '../utils/speechUtils'
 
 export default function Settings() {
   const { state, actions } = useStore()
@@ -84,6 +84,10 @@ export default function Settings() {
 
         {/* Device support */}
         <Section title="Qurilma imkoniyatlari">
+          <Support label="Audio manba" ok={getAudioStatus().lingvaAvailable !== false} note={
+            getAudioStatus().source === 'lingva' ? 'Lingva TTS (Google neural)' : 'Brauzer TTS'
+          } />
+          <Support label="Keshlanган audiolar" ok={getAudioStatus().cachedCount > 0} note={`${getAudioStatus().cachedCount} ta`} />
           <Support label="Ovoz chiqarish (TTS)" ok={ttsSupported()} />
           <Support label="Arabcha ovoz" ok={hasArabicVoice()} note="Brauzerga bog'liq" />
           <Support label="Nutqni tanish (mikrofon)" ok={recognitionSupported()} />
