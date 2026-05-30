@@ -1,0 +1,100 @@
+import React, { useEffect, useMemo, useState } from 'react'
+import { StoreProvider, useStore } from './store/AppStore'
+import { NavContext } from './store/nav'
+import { BadgeToast } from './components/BadgeSystem'
+
+import LandingPage from './components/LandingPage'
+import Dashboard from './components/Dashboard'
+import LessonMap from './components/LessonMap'
+import LessonPlayer from './components/LessonPlayer'
+import ResultsScreen from './components/ResultsScreen'
+import VocabReview from './components/VocabReview'
+import Profile from './components/Profile'
+import Settings from './components/Settings'
+import BottomNav from './components/BottomNav'
+
+const TABBED_VIEWS = new Set(['dashboard', 'map', 'review', 'profile'])
+
+function Shell() {
+  const { state, actions } = useStore()
+  const [view, setView] = useState(state.user.onboarded ? 'dashboard' : 'landing')
+  const [params, setParams] = useState({})
+  const [transitioning, setTransitioning] = useState(false)
+
+  const navigate = useMemo(
+    () => (nextView, nextParams = {}) => {
+      setTransitioning(true)
+      // brief fade for page transition
+      setTimeout(() => {
+        setView(nextView)
+        setParams(nextParams)
+        setTransitioning(false)
+        const main = document.getElementById('app-main')
+        if (main) main.scrollTo({ top: 0 })
+      }, 120)
+    },
+    [],
+  )
+
+  // If not onboarded, force landing.
+  useEffect(() => {
+    if (!state.user.onboarded && view !== 'landing') setView('landing')
+  }, [state.user.onboarded, view])
+
+  const navValue = useMemo(() => ({ view, params, navigate }), [view, params, navigate])
+
+  const showTabs = TABBED_VIEWS.has(view)
+
+  let screen = null
+  switch (view) {
+    case 'landing':
+      screen = <LandingPage />
+      break
+    case 'dashboard':
+      screen = <Dashboard />
+      break
+    case 'map':
+      screen = <LessonMap />
+      break
+    case 'lesson':
+      screen = <LessonPlayer lessonId={params.lessonId} />
+      break
+    case 'results':
+      screen = <ResultsScreen result={params.result} lessonId={params.lessonId} />
+      break
+    case 'review':
+      screen = <VocabReview />
+      break
+    case 'profile':
+      screen = <Profile />
+      break
+    case 'settings':
+      screen = <Settings />
+      break
+    default:
+      screen = <Dashboard />
+  }
+
+  return (
+    <NavContext.Provider value={navValue}>
+      <div className="app-frame shadow-2xl">
+        <main
+          id="app-main"
+          className={`flex-1 overflow-y-auto no-scrollbar ${transitioning ? 'opacity-0' : 'animate-fadeIn'} transition-opacity duration-150`}
+        >
+          {screen}
+        </main>
+        {showTabs && <BottomNav />}
+        <BadgeToast badgeIds={state._lastBadges || []} onClose={actions.clearLastBadges} />
+      </div>
+    </NavContext.Provider>
+  )
+}
+
+export default function App() {
+  return (
+    <StoreProvider>
+      <Shell />
+    </StoreProvider>
+  )
+}
